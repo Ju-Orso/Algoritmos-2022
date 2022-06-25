@@ -1,0 +1,8 @@
+centavos =  int(input('Informe a quantia de centavos: '))
+um_pila = (centavos - (centavos%100)) 
+cinquenta = (centavos - um_pila) - ((centavos - um_pila)%50)
+vintecinco = (centavos - um_pila - cinquenta) - ((centavos - um_pila - cinquenta)%25)
+dez = (centavos - um_pila - cinquenta -vintecinco) - ((centavos - um_pila - cinquenta - vintecinco)%10)
+cinco = (centavos - um_pila - cinquenta -vintecinco - dez ) - ((centavos - um_pila - cinquenta - vintecinco - dez)%5)
+um_centavo = (centavos - um_pila - cinquenta -vintecinco - dez - cinco) - ((centavos - um_pila - cinquenta - vintecinco - dez - cinco)%1)
+print ('1 real: ' + str(um_pila/100) + '\n50: ' + str(cinquenta/50) + '\n25: ' + str(vintecinco/25) + '\n10: ' + str(dez/10) + '\n5:' + str(cinco/5) + '\n1 centavo: ' + str(um_centavo/1))
